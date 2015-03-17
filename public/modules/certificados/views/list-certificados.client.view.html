@@ -1,0 +1,19 @@
+<section data-ng-controller="CertificadosController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Certificados</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="certificado in certificados" data-ng-href="#!/certificados/{{certificado._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="certificado.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="certificado.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="certificado.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!certificados.$resolved || certificados.length">
+    	No Certificados yet, why don't you <a href="/#!/certificados/create">create one</a>?
+    </div>
+</section>

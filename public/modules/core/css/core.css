@@ -1,5 +1,363 @@
+body {
+  padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  background-color: #e5e5e5;
+  font-size: 21px;
+  position: relative;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* CORE ELEMENTS
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+h1 {
+    font-size: 50px;
+    font-weight: 100;
+}
+h2 {
+    font-size: 38px;
+    font-weight: 100;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+hr {
+    border-color: #CCCCCC;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* FORMAT
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.lead {
+    font-weight: 100;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    border-radius: 1px;
+    background-color: #d93b2b;
+    padding: 16px 32px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* NAVBAR
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.navbar-brand img {
+    width: 120px;
+    margin-top: -10px;
+}
+.navbar {
+    background-color: #37a4dc;
+    border-bottom: none;
+    font-size: 32px;
+    box-shadow: 0 0 0px #000000;
+}
+.navbar-header {
+
+}
+.navbar-nav {
+    margin-top: 9px;
+}
+.navbar-collapse {
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.navbar-inverse .navbar-nav>li>.label{
+    color: #fff !important;
+    padding: 10px 15px;
+}
+
+.navbar-inverse .navbar-nav>li>.label:hover{
+    color: #000 !important;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #37a4dc !important;
+    color: #FFFFFF !important;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar{
+    background-color: #666;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* GLOBAL SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+section h2 {
+    margin-top: 60px;
+    margin-bottom: 36px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 2px #666666;
+    height: 230px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.friend-logo:hover{
+    -webkit-transition: all 1s ease;
+    -webkit-filter:  grayscale(0);
+}
+.friend-logo{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    -webkit-transition: all 1s ease;
+    -webkit-filter:  grayscale(1);
+}
+
+.loc-bx {
+    margin-top: 42px;
+    padding: 22px;
+}
+
+.loc-bx h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#hey-yo {
+    margin-top: 62px;
+    text-transform: uppercase;
+}
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* MAIN SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+section.main {
+    background-color: #37a4dc;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+.igrejinha {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+.starter-template {
+  padding: 121px 15px;
+  text-align: center;
+}
+.sobre {
+    font-size: 22px;
+    background-color: #FFFFFF;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 40px;
+    margin-top: -120px;
+    box-shadow: 2px 2px 2px #666666;
+}
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* AGENCA SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.agenda {
+    margin-bottom: 40px;
+}
+
+.presentation-gem  {
+    margin-bottom: 30px;
+}
+.presentation-desc  {
+    display: inline-block;
+    margin-left: 15px;
+    max-width: 80%;
+}
+.agenda hr {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.entry-gem {
+    display: table;
+    width: 100%;
+}
+.gem-col {
+    display: table-cell;
+    vertical-align: top;
+}
+.gem-time {
+    width: 100px;
+}
+.gem-hour {
+    font-size: 60px;
+}
+.gem-turn {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.gem-content {
+    padding-right: 20px;
+}
+.sub {
+    color: #666666;
+    font-size: 21px;
+    font-weight: 500;
+
+}
+.gem-photo {
+    width: 200px;
+    padding-bottom: 22px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* LOCALIZAÇÃO SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.localizacao {
+    background-color: #d93b2b;
+    padding: 44px 0px 60px;
+    overflow: hidden;
+    min-height: 350px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+    position: relative;
+}
+.maplayer {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* ORGANIZACAO SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.organizacao {
+    color: #FFFFFF;
+    background-color: #37a4dc;
+    min-height: 330px;
+    padding-bottom: 44px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* PARCEIROS SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.parceiros {
+    color: #FFFFFF;
+    background-color: #f5c336;
+    min-height: 330px;
+    padding-bottom: 44px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* PATROCINADORES SECTION
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.patrocinadores {
+    color: #FFFFFF;
+    background-color: #01a45a;
+    min-height: 330px;
+    padding-bottom: 44px;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* FOOTER
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+footer {
+    padding: 12px 0px;
+    background-color: #37a4dc;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+*
+* RESPONSIVE RULES
+*
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar-header{
+        width: 100%;
+    }
+    .navbar-brand{
+        display: block;
+        margin: 0 auto 40px !important;
+        float: none;
+        width: 160px;
+    }
+    .navbar-brand img {
+        width: 160px;
+        margin-top: 10px;
+    }
+    #navbar .navbar-nav{
+          float: none !important;
+          display: table;
+          margin: 10px auto 0;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-brand img {
+        width: 220px;
+        margin-top: 0px;
+    }
+
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-header{
+        width: auto;
+    }
+    .navbar-brand{
+        float: left;
+        width: auto;
+    }
+    #navbar .navbar-nav{
+      float: right !important;
+    }
+}
+
+
 .content {
-	margin-top: 50px;
+	margin-top: 70px;
 }
 .undecorated-link:hover {
 	text-decoration: none;
