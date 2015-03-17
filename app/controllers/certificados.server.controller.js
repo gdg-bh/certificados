@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
     phantom = require('phantom'),
     temp = require('temp'),
+    swig = require('swig'),
     errorHandler = require('./errors.server.controller'),
     Certificado = mongoose.model('Certificado'),
     _ = require('lodash');
@@ -21,15 +22,29 @@ exports.create = function(req, res) {
 
     phantom.create(function(ph) {
         ph.createPage(function(page) {
-            page.open('http://www.google.com', function(status) {
-                console.log('opened google? ', status);
-                page.render(tempName);
-                page.evaluate(function() {
-                    return document.title;
-                }, function(result) {
-                    console.log('Page title is ' + result);
-                    ph.exit();
-                });
+            page.settings = {
+                loadImages: true,
+                localToRemoteUrlAccessEnabled: true,
+                javascriptEnabled: true,
+                loadPlugins: false
+            };
+
+            page.set('paperSize', {
+                format: 'A4',
+                orientation: 'portrait',
+                border: '1cm'
+            });
+
+            var html = swig.renderFile('public/modules/certificados/views/template-certificado.cliente.view.html', {
+                name: 'Participante 1',
+                eventName: 'GDG-BH Extended'
+            });
+
+            page.setContent(html,'http://gdhbh.com' );
+
+            page.render(tempName, function(error) {
+                if (error) console.log('Error rendering PDF: %s', error);
+                ph.exit();
             });
         });
     });
@@ -40,8 +55,8 @@ exports.create = function(req, res) {
     });
 };
 
-exports.download = function(req, res) {    
-    res.download('/tmp/'+req.params.downloadId);
+exports.download = function(req, res) {
+    res.download('/tmp/' + req.params.downloadId);
 };
 
 /**
