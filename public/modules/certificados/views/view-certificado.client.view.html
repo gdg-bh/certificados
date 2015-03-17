@@ -1,11 +1,25 @@
-<section data-ng-controller="CertificadosController" data-ng-init="findOne()">
-    <div class="page-header">
-        <h1 data-ng-bind="certificado.name"></h1>
+<section data-ng-controller="CertificadosController">
+    <div class="jumbotron text-center">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <img alt="GDH-BH" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <p class="lead">
+                Certificado gerado !
+            </p>
+        </div>
+        <div class="row">
+            <p>
+                <a class="btn btn-success btn-lg" href="/certificados/{{certificadoId}}">
+                    <i class="glyphicon glyphicon-download-alt">Download</i>
+                </a>
+            </p>
+        </div>
     </div>
-    <a class="btn btn-primary" href="/#!/certificados/{{certificado._id}}/download">
-            <i class="glyphicon glyphicon-edit"></i>
-        </a>
-    <div>
+    <!-- <div>
         <a class="btn btn-primary" data-ng-click="remove();">
             <i class="glyphicon glyphicon-trash"></i>
         </a>
@@ -16,7 +30,5 @@
         </a>
         <a class="btn btn-primary" data-ng-click="remove();">
             <i class="glyphicon glyphicon-trash"></i>
-        </a>
-    </div>
-
+        </a> -->
 </section>

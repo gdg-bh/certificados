@@ -42,7 +42,8 @@
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.2",
     "phantom": "^0.7.2",
-    "swig": "~1.4.1"
+    "swig": "~1.4.1",
+    "temp": "^0.8.1"
   },
   "devDependencies": {
     "supertest": "~0.14.0",

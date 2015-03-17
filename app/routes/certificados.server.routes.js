@@ -6,18 +6,8 @@ module.exports = function(app) {
 
 	// Certificados Routes
 	app.route('/certificados')
-		.get(certificados.list)
-		// .post(users.requiresLogin, certificados.create);
+		// .get(certificados.list)
 		.post(certificados.create);
 
-	app.route('/certificados/:certificadoId')
-		.get(certificados.read)
-		.get(certificados.download)
-	// 	// .put(users.requiresLogin, certificados.hasAuthorization, certificados.update)
-	// 	 .put(certificados.update)
-	// 	// .delete(users.requiresLogin, certificados.hasAuthorization, certificados.delete);
-		.delete(certificados.delete);
-
-	// Finish by binding the Certificado middleware
-	app.param('certificadoId', certificados.certificadoByID);
+	app.route('/certificados/:downloadId').get(certificados.download);
 };
