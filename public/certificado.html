@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Certificado {{ GDG BH }}</title>
+
+	<style type="text/css" media="all">
+		@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+		@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+
+		@media all {
+			*, *:before, *:after {
+			    -webkit-box-sizing: border-box;
+			       -moz-box-sizing: border-box;
+			            box-sizing: border-box;
+			}
+
+			@page {
+				size: landscape;
+				margin: 0;
+				padding: 0;
+			}
+
+			body{
+				font-family: 'Open Sans', sans-serif;
+				text-align: center;
+				color: #FFF;
+				width: 297mm;
+				height: 210mm;
+				margin: 0;
+				padding: 0;
+			}
+
+			.mask{
+				background: #39A5B8 url(img/texture.png) repeat;
+				padding: 20px 60px;
+				width: 297mm;
+				height: 210mm;
+				overflow: hidden;
+				position: absolute;
+
+			}
+
+			.bg:before{
+				content: "";
+				width: 200mm;
+				height: 300mm;
+				background: #B61D1D;
+				position: absolute;
+				-webkit-transform: rotate(38deg);
+				-ms-transform: rotate(38deg);
+				-o-transform: rotate(38deg);
+				transform: rotate(38deg);
+				left: 10mm;
+				top: -100mm;
+				-webkit-box-shadow: 10px 0 10px rgba(0,0,0, .4);
+				box-shadow: 10px 0 10px rgba(0,0,0, .4);
+				-webkit-filter: blur(0);
+			}
+
+			.bg:after{
+				content: "";
+				width: 300mm;
+				height: 350mm;
+				background: #E7333F;
+				position: absolute;
+				-webkit-transform: rotate(32deg);
+				-ms-transform: rotate(32deg);
+				-o-transform: rotate(32deg);
+				transform: rotate(32deg);
+				left: -130mm;
+				top: -120mm;
+				-webkit-box-shadow: 10px 0 10px rgba(0,0,0, .4);
+				box-shadow: 10px 0 10px rgba(0,0,0, .4);
+				-webkit-filter: blur(0);
+			}
+
+			h1{
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-size: 36pt;
+				margin: 0 0 5mm;
+			}
+
+			h2{
+				margin: 0;
+				padding: 0;
+				display: table-header-group;
+			}
+
+			.box{
+				background: #FFF;
+				color: #878786;
+				height: 130mm;
+				padding: 8mm;
+				display: table;
+				width: 100%;
+				-webkit-box-shadow: 0 0 4mm rgba(0,0,0, .5);
+				box-shadow: 0 0 4mm rgba(0,0,0, .5);
+			}
+
+			.box p{
+				font-size: 24pt;
+				margin: 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.name{
+				font-size: 30pt;
+				font-weight: bold;
+				line-height: 1em;
+			}
+
+			.event{
+				font-size: 24pt;
+				font-weight: 600;
+				line-height: 1em;
+				margin-bottom: 3mm;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+			}
+
+			.mark-left{
+				margin-right: 10px;
+			}
+
+			.mark-right{
+				margin-left: 10px;
+			}
+
+			.event-title{
+				max-width: 90%;
+			}
+
+			.date{
+				font-size: 20pt;
+			}
+
+			.place{
+				font-size: 17pt;
+			}
+
+			.workload{
+				font-size: 14pt;
+			}
+
+			aside{
+				margin-top: 4mm;
+				font-style: italic;
+				display: inline-block;
+				font-size: 18pt;
+				line-height: 0;
+			}
+
+
+			/*aside:before{
+				content: "";
+				background: #FFF;
+				width: 4mm;
+				height: 4mm;
+				border-radius: 2mm;
+				position: absolute;
+				box-shadow: -6mm 0 0 -1mm #fff, -12mm 0 0 -1mm #fff, 6mm 0 0 -1mm #fff, 12mm 0 0 -1mm #fff;
+			}*/
+
+			h1, .box, aside, #badge{
+				z-index: 1;
+				position: relative;
+			}
+
+			p > span{
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="mask">
+		<div class="bg"></div>
+
+		<svg version="1.1" id="badge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24mm" height="24mm" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+			<polygon id="background" fill="#F0C305" points="30.22,4.8 35,0 39.78,4.8 45.82,1.71 48.88,7.76 55.57,6.69 56.62,13.38 63.32,14.43
+				62.24,21.12 68.29,24.19 65.2,30.22 70,35 65.2,39.78 68.29,45.82 62.24,48.88 63.31,55.57 56.62,56.62 55.57,63.32 48.88,62.24
+				45.81,68.29 39.78,65.2 35,70 30.22,65.2 24.18,68.29 21.12,62.24 14.43,63.31 13.38,56.62 6.68,55.57 7.76,48.88 1.71,45.81
+				4.8,39.78 0,35 4.8,30.22 1.71,24.18 7.76,21.12 6.69,14.43 13.38,13.38 14.43,6.68 21.12,7.76 24.19,1.71 "/>
+			<polygon id="shadow" opacity="0.2" fill="#CDA605" points="65.2,39.78 70,35 65.2,30.22 68.29,24.19 62.24,21.12 63.32,14.43
+				56.62,13.38 55.57,6.69 48.88,7.76 45.82,1.71 39.78,4.8 35,0 35,70 35,70 39.78,65.2 45.81,68.29 48.88,62.24 55.57,63.32
+				56.62,56.62 63.31,55.57 62.24,48.88 68.29,45.82 "/>
+			<polygon id="edge" fill="none" stroke="#F7ECBF" stroke-width="0.5091" stroke-miterlimit="10" points="30.96,9.5 35,5.44
+			39.04,9.5 44.14,6.89 46.72,11.99 52.38,11.09 53.26,16.74 58.91,17.63 58.01,23.28 63.11,25.87 60.5,30.96 64.56,35 60.5,39.04
+			63.11,44.14 58.01,46.72 58.91,52.38 53.26,53.26 52.37,58.91 46.72,58.01 44.13,63.11 39.04,60.5 35,64.56 30.96,60.5 25.86,63.11
+			23.28,58.01 17.62,58.91 16.74,53.26 11.09,52.37 11.99,46.72 6.89,44.13 9.5,39.04 5.44,35 9.5,30.96 6.89,25.86 11.99,23.28
+			11.09,17.62 16.74,16.74 17.63,11.09 23.28,11.99 25.87,6.89 "/>
+		</svg>
+
+
+		<h1>CERTIFICADO</h1>
+
+		<div class="box">
+			<h2><img src="img/logos/gdgbh.svg" alt="Logo do {{ GDG BH }}"></h2>
+
+			<p>
+				Certificamos que
+				<span class="name">{{ Nome }}</span>
+				<span>participou do evento</span>
+				<span class="event">
+					<span class="mark-left">«</span>
+					<span class="event-title">{{ Evento }}</span>
+					<span class="mark-right">»</span>
+				</span>
+				<span class="date">no dia {{ 30 }} de {{ dezembro }} de {{ 2015 }},</span>
+				<span class="place">na cidade de  {{ Belo Horizonte }},</span>
+				<span class="workload">com carga horária de {{ hora }}.</span>
+			</p>
+		</div>
+
+
+		<aside>
+			<svg version="1.1" id="balls" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27mm" height="4mm" viewBox="0 0 78.36 11.5" enable-background="new 0 0 78.36 11.5" xml:space="preserve">
+				<circle fill="#FFFFFF" cx="3.58" cy="5.75" r="3.58"/>
+				<circle fill="#FFFFFF" cx="21.38" cy="5.75" r="3.58"/>
+				<circle fill="#FFFFFF" cx="56.98" cy="5.75" r="3.58"/>
+				<circle fill="#FFFFFF" cx="39.18" cy="5.75" r="5.75"/>
+				<circle fill="#FFFFFF" cx="74.78" cy="5.75" r="3.58"/>
+			</svg>
+
+			<p>gdgbh.org</p>
+		</aside>
+
+	</div>
+</body>
+</html>
