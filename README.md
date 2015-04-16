@@ -10,6 +10,11 @@ Com essas entradas o gerador irá gerar os certificados em formato PDF.
 ## Version
 0.1.0b
 
+## Dependencias
+
+* [mongoDB](http://www.mongodb.org/)
+* [PhantomJS](http://phantomjs.org/download.html)
+
 ## Desenvolvimento
 
 Você quer contribuir? Excelente!!
@@ -26,6 +31,7 @@ Segue abaixo alguns frameworks usados no projeto:
 * [jQuery] - duh
 
 Workflow de Desenvolvimento
+
 
 Para levantar o server da aplicação:
 
