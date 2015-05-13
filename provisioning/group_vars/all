@@ -1,0 +1,16 @@
+---
+src_root: /home/{{ansible_user_id}}/src
+nginx_hostname: hostname
+node_port: 3000
+web_project_name: web
+express_project_name: api
+express_base_route: api/
+server_name: localhost
+rails_version: 4
+ruby_install: rvm
+ruby_version: 2.2.0
+ruby_user_name: root
+user_name: vagrant
+group_name: '{{ user_name }}'
+rvm1_user: vagrant
+user_home_path: '/home/{{ user_name }}'

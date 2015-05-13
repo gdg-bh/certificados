@@ -1,0 +1,16 @@
+---
+- name: Common | Update apt cache
+  sudo: yes
+  apt: update-cache=yes
+  tags: common
+
+- name: Common | Update language
+  sudo: yes
+  apt: pkg=language-pack-en
+  tags: common
+
+- name: Create profile.d directory
+  file: path={{ profile_d_path }} state=directory owner={{ user_name }} group={{ group_name }}
+
+- name: Create ~/.bash_profile which loads all from ~/profile.d
+  template: src=bash_profile.j2 dest={{ user_home_path }}/.bash_profile owner={{ user_name }} group={{ group_name }}

@@ -1,0 +1,14 @@
+---
+- include: package.yml
+  when: ruby_install == 'package'
+
+- include: rvm.yml
+  when: ruby_install == 'rvm'
+
+- include: rbenv.yml
+  when: ruby_install == 'rbenv'
+
+- name: Install bundler
+  command: /bin/bash -l -c 'gem install bundler --no-ri --no-rdoc'
+  sudo_user: '{{ ruby_user_name }}'
+
