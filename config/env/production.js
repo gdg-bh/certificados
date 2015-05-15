@@ -20,8 +20,17 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
 			]
 		},
-		css: 'public/dist/application.min.css',
-		js: 'public/dist/application.min.js'
+		css: [
+			'public/modules/**/css/*.css'
+		],
+		// css: 'public/dist/application.min.css',
+		js: [
+			'public/config.js',
+			'public/application.js',
+			'public/modules/*/*.js',
+			'public/modules/*/*[!tests]*/*.js'
+		]
+		// js: 'public/dist/application.min.js'
 	},
 	google: {
 		clientID: process.env.GOOGLE_ID || 'APP_ID',
