@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/gdgbh-certificados',
+	db: 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASSWORD+'@ds045998.mongolab.com:45998/gdgbh-certificados',
 	assets: {
 		lib: {
 			css: [
