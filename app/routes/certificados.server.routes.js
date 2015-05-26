@@ -1,5 +1,8 @@
 'use strict';
 
+var multiparty = require('connect-multiparty');
+var multipartyMiddleware = multiparty();
+
 module.exports = function(app) {
 	var users = require('../../app/controllers/users.server.controller');
 	var certificados = require('../../app/controllers/certificados.server.controller');
@@ -7,7 +10,7 @@ module.exports = function(app) {
 	// Certificados Routes
 	app.route('/certificados')
 		// .get(certificados.list)
-		.post(certificados.create);
+		.post(multipartyMiddleware,certificados.create);
 
 	app.route('/certificados/:downloadId').get(certificados.download);
 };
