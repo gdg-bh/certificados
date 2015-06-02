@@ -1,22 +1,29 @@
 'use strict';
 
 // Certificados controller
-angular.module('certificados').controller('CertificadosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Certificados',
-    function($scope, $stateParams, $location, Authentication, Certificados) {
+angular.module('certificados').controller('CertificadosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Certificados','Upload',
+    function($scope, $stateParams, $location, Authentication, Certificados, Upload) {
         $scope.authentication = Authentication;
-
+        $scope.eventInfo = {};
         // Create new Certificado
         $scope.create = function() {
             // Create new Certificado object
-            var certificado = new Certificados({
-                name: this.name
-            });
+            var certificado = $scope.eventInfo;
 
-            // Redirect after save
-            certificado.$save(function(response) {
+            Upload.upload({
+                url: '/certificados',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                },
+                fields: {
+                    eventInfo: certificado
+                },
+                file: $scope.csvFile,
+            }).success(function(response, status) {
                 $location.path('certificados/' + response.fileName);
-            }, function(errorResponse) {
-                $scope.error = errorResponse.data.message;
+            }).error(function(err) {
+                $scope.error = (err.data && err.data.message) ? err.data.message : 'Uknown Error, please contact the system administrator.' ;
             });
         };
 
