@@ -90,7 +90,6 @@ exports.create = function(req, res) {
                             console.log('Error rendering PDF: %s', error);
                             ph.exit();
                         } else {
-                            fs.openSync(tempName, 'w');
                             var pdfFile = fs.createReadStream(tempName);
                             archive.append(pdfFile, {
                                 name: attendee.name + '.pdf'
